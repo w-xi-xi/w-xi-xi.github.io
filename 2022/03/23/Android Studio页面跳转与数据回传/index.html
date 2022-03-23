@@ -465,90 +465,10 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="项目要求："><a href="#项目要求：" class="headerlink" title="项目要求："></a>项目要求：</h4><pre><code>    在第二个 Activity 进行摘桃子并记录摘取的个数，该数据保存在 Intent 的 Extras 属性中。当单击“退出桃园”的 Button 时，会在第一个 Activity 中显示摘取的桃子个数。       </code></pre>
-<p>运行效果如下图所示：<br>          <img src="D:/应用程序/blog/hexoblog/themes/hexo-theme-matery/source/Sample_picture.png" alt="avatar">                                         </p>
-<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>1、搭建首页界面布局：<br>（1）创建PickPeach程序<br>（2）导入界面图片<br>（3）放置界面控件<br>代码如下：<br><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg"
-    android:gravity="center_vertical"
-    tools:context=".MainActivity"><br>    <Button
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="180dp"
-        android:text="去桃园"
-        android:background="#8B03A9F4"
-        android:id="@+id/btn_peach"/><br>    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:id="@+id/iv_monkey"
-        android:background="@drawable/monkey"/><br>    <Button
-        android:id="@+id/peach"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/peach" /><br>    <TextView
-        android:id="@+id/tv_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        android:text="摘到0个"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="80dp"/><br></RelativeLayout><br>2、搭建桃园界面布局：<br>（1）创建桃园界面<br>（2）导入界面图片<br>（3）放置界面控件<br>代码如下：<br><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:background="@drawable/btn_peach"
-    android:orientation="vertical"
-    tools:context=".Main2Activity"><br>    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="2"><br>    </LinearLayout><br>    <LinearLayout
-        android:layout_width="400dp"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:background="@drawable/tree"><br>        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"><br>            <Button
-                android:id="@+id/bt1"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="90dp"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/peach" /><br>            <Button
-                android:id="@+id/bt2"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_alignTop="@id/bt1"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/peach" /><br>            <Button
-                android:id="@+id/bt3"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_alignTop="@id/bt1"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="200dp"
-                android:background="@drawable/peach" /><br>            <Button
-                android:id="@+id/bt4"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_alignLeft="@id/bt2"
-                android:layout_marginLeft="120dp"
-                android:layout_marginTop="200dp"
-                android:background="@drawable/peach" /><br>            <Button
-                android:id="@+id/exit"
-                android:layout_width="90dp"
-                android:layout_height="40dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:background="#8B03A9F4"
-                android:text="退出桃园" /><br>        </RelativeLayout><br>    </LinearLayout><br></LinearLayout><br>3、实现小猴子摘桃功能：<br>（1）实现首页界面显示效果<br>（2）实现桃园界面摘桃效果<br>（3）实现页面跳转与数据回传功能<br>代码如下：<br>MainActivity.java<br>import androidx.annotation.Nullable;<br>import androidx.appcompat.app.AppCompatActivity;<br>import android.content.Intent;<br>import android.os.Bundle;<br>import android.view.View;<br>import android.widget.Button;<br>import android.widget.TextView;</p>
+<p>运行效果如下图所示：<br>          <img src="/.io//应用程序/blog/hexoblog/themes/hexo-theme-matery/source/Sample_picture.png" alt="avatar">                                         </p>
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>1、搭建首页界面布局：<br>（1）创建PickPeach程序<br>（2）导入界面图片<br>（3）放置界面控件<br>代码如下：<br><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg" android:gravity="center_vertical" tools:context=".MainActivity"><br>    <Button android:layout_width="80dp" android:layout_height="40dp" android:layout_marginleft="180dp" android:text="去桃园" android:background="#8B03A9F4" android:id="@+id/btn_peach"><br>    <ImageView android:layout_width="150dp" android:layout_height="150dp" android:id="@+id/iv_monkey" android:background="@drawable/monkey"><br>    <Button android:id="@+id/peach" android:layout_width="40dp" android:layout_height="30dp" android:layout_marginleft="180dp" android:layout_margintop="80dp" android:background="@drawable/peach"><br>    <TextView android:id="@+id/tv_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textsize="20sp" android:textcolor="#000000" android:text="摘到0个" android:layout_marginleft="250dp" android:layout_margintop="80dp"><br></TextView></Button></ImageView></Button></RelativeLayout><br>2、搭建桃园界面布局：<br>（1）创建桃园界面<br>（2）导入界面图片<br>（3）放置界面控件<br>代码如下：<br><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content" android:layout_height="match_parent" android:background="@drawable/btn_peach" android:orientation="vertical" tools:context=".Main2Activity"><br>    <LinearLayout android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="2"><br>    </LinearLayout><br>    <LinearLayout android:layout_width="400dp" android:layout_height="0dp" android:layout_weight="3" android:background="@drawable/tree"><br>        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"><br>            <Button android:id="@+id/bt1" android:layout_width="40dp" android:layout_height="30dp" android:layout_marginleft="90dp" android:layout_margintop="60dp" android:background="@drawable/peach"><br>            <Button android:id="@+id/bt2" android:layout_width="40dp" android:layout_height="30dp" android:layout_aligntop="@id/bt1" android:layout_marginleft="140dp" android:layout_margintop="80dp" android:background="@drawable/peach"><br>            <Button android:id="@+id/bt3" android:layout_width="40dp" android:layout_height="30dp" android:layout_aligntop="@id/bt1" android:layout_marginleft="70dp" android:layout_margintop="200dp" android:background="@drawable/peach"><br>            <Button android:id="@+id/bt4" android:layout_width="40dp" android:layout_height="30dp" android:layout_alignleft="@id/bt2" android:layout_marginleft="120dp" android:layout_margintop="200dp" android:background="@drawable/peach"><br>            <Button android:id="@+id/exit" android:layout_width="90dp" android:layout_height="40dp" android:layout_alignparentright="true" android:layout_alignparentbottom="true" android:background="#8B03A9F4" android:text="退出桃园"><br>        </Button></Button></Button></Button></Button></RelativeLayout><br>    </LinearLayout><br></LinearLayout><br>3、实现小猴子摘桃功能：<br>（1）实现首页界面显示效果<br>（2）实现桃园界面摘桃效果<br>（3）实现页面跳转与数据回传功能<br>代码如下：<br>MainActivity.java<br>import androidx.annotation.Nullable;<br>import androidx.appcompat.app.AppCompatActivity;<br>import android.content.Intent;<br>import android.os.Bundle;<br>import android.view.View;<br>import android.widget.Button;<br>import android.widget.TextView;</p>
 <p>public class MainActivity extends AppCompatActivity {<br>    private Button btn_peach;<br>    private TextView tv_count;<br>    private int totalCount = 0;<br>    @Override<br>    protected void onCreate(Bundle savedInstanceState) {<br>        super.onCreate(savedInstanceState);<br>        setContentView(R.layout.activity_main);<br>        init();<br>    }<br>    private void init(){<br>        btn_peach = findViewById(R.id.btn_peach);<br>        tv_count = findViewById(R.id.tv_count);<br>        btn_peach.setOnClickListener(new View.OnClickListener() {<br>            @Override<br>            public void onClick(View view) {<br>                Intent intent = new Intent(MainActivity.this, Main2Activity.class);<br>                startActivityForResult(intent, 1);<br>            }<br>        });<br>    }<br>    protected void onActivityResult(int requestCode,int resultCode,@Nullable Intent data){<br>        super.onActivityResult(requestCode,resultCode,data);<br>        if (requestCode == 1&amp;&amp;requestCode==1){<br>            int count = data.getIntExtra(“count”,0);<br>            totalCount = totalCount + count;<br>            tv_count.setText(“摘到”+totalCount+”个”);<br>        }<br>    }<br>}<br>Main2Activity.java<br>import androidx.appcompat.app.AppCompatActivity;<br>import android.content.Intent;<br>import android.os.Bundle;<br>import android.view.View;<br>import android.widget.Button;<br>import android.widget.Toast;<br>public class Main2Activity extends AppCompatActivity implements View.OnClickListener{<br>    private int count;<br>    private Button bt1;<br>    private Button bt2;<br>    private Button bt3;<br>    private Button bt4;<br>    private Button exit;<br>    @Override<br>    protected void onCreate(Bundle savedInstanceState) {<br>        super.onCreate(savedInstanceState);<br>        setContentView(R.layout.activity_main2);<br>        init();<br>    }<br>    private void init() {<br>        bt1 = findViewById(R.id.bt1);<br>        bt2 = findViewById(R.id.bt2);<br>        bt3 = findViewById(R.id.bt3);<br>        bt4 = findViewById(R.id.bt4);<br>        exit = findViewById(R.id.exit);<br>        bt1.setOnClickListener(this);<br>        bt2.setOnClickListener(this);<br>        bt3.setOnClickListener(this);<br>        bt4.setOnClickListener(this);<br>        exit.setOnClickListener(this);<br>    }<br>    @Override<br>    public void onClick(View view) {<br>        switch (view.getId()){<br>            case R.id.bt1:<br>                info(bt1);<br>                break;<br>            case R.id.bt2:<br>                info(bt2);<br>                break;<br>            case R.id.bt3:<br>                info(bt3);<br>                break;<br>            case R.id.bt4:<br>                info(bt4);<br>                break;<br>            case R.id.exit:<br>                returnData();<br>                break;<br>        }<br>    }<br>    private void info(Button btn) {<br>        count++;<br>        btn.setVisibility(View.INVISIBLE);<br>        Toast.makeText(Main2Activity.this,”摘到”+count+”个桃子”,Toast.LENGTH_LONG).show();<br>    }<br>    private void returnData(){<br>        Intent intent = new Intent();<br>        intent.putExtra(“count”,count);<br>        setResult(1,intent);<br>        Main2Activity.this.finish();<br>    }<br>}</p>
-<h4 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h4><p><img src="D:/应用程序/blog/hexoblog/themes/hexo-theme-matery/source/1.png" alt="avatar"><br><img src="D:/应用程序/blog/hexoblog/themes/hexo-theme-matery/source/2.png" alt="avatar"><br><img src="D:/应用程序/blog/hexoblog/themes/hexo-theme-matery/source/3.png" alt="avatar"></p>
+<h4 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h4><p><img src="/.io//应用程序/blog/hexoblog/themes/hexo-theme-matery/source/1.png" alt="avatar"><br><img src="/.io//应用程序/blog/hexoblog/themes/hexo-theme-matery/source/2.png" alt="avatar"><br><img src="/.io//应用程序/blog/hexoblog/themes/hexo-theme-matery/source/3.png" alt="avatar"></p>
 <h4 id="收获与总结"><a href="#收获与总结" class="headerlink" title="收获与总结"></a>收获与总结</h4><p>1、界面跳转通过Intent进行跳转：分为隐式Intent 显示Intent。<br>2、Intent设定规则： 定义　绑定另一个页面　启动另一个页面；<br>关闭页面： finish()。<br>3、通过intent传递数据<br>（1）直接传递， intent . putExtra(key, value)<br>（2）通过bundle， intent . putExtras ( bundle );<br>注意：<br>（1）这两种都要求传递的对象必须可序列化（Parcelable、Serializable）<br>（2）Parcelable实现相对复杂<br>（3）关于Parcelable和Serializable，和Parcelable相比，Seriaizable容易出错并且速度相当慢。（4）通过intent传递数据是有大小限制滴，超过限制，要么抛异常，要么新的Activity启动失败。</p>
 
                 
