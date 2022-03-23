@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="页面跳转与数据回传, xi-xi blog">
+    <meta name="keywords" content="安卓开发页面跳转与数据回传, xi-xi blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>页面跳转与数据回传 | xi-xi blog</title>
+    <title>安卓开发页面跳转与数据回传 | xi-xi blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">页面跳转与数据回传</h1>
+                    <h1 class="description center-align post-title">安卓开发页面跳转与数据回传</h1>
                 </div>
             </div>
         </div>
@@ -464,10 +464,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="项目要求："><a href="#项目要求：" class="headerlink" title="项目要求："></a>项目要求：</h4><p>在第二个 Activity 进行摘桃子并记录摘取的个数，该数据保存在 Intent 的 Extras 属性中。当单击“退出桃园”的 Button 时，会在第一个 Activity 中显示摘取的桃子个数。<br>运行效果如下图所示：<br>          <img src="/.io//应用程序/blog/hexoblog/themes/hexo-theme-matery/source/Sample_picture.png" alt="avatar">                                         </p>
-<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>1、搭建首页界面布局：<br>（1）创建PickPeach程序<br>（2）导入界面图片<br>（3）放置界面控件<br>代码如下：<br>‘<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg" android:gravity="center_vertical" tools:context=".MainActivity"><br>    <Button android:layout_width="80dp" android:layout_height="40dp" android:layout_marginleft="180dp" android:text="去桃园" android:background="#8B03A9F4" android:id="@+id/btn_peach"><br>    <ImageView android:layout_width="150dp" android:layout_height="150dp" android:id="@+id/iv_monkey" android:background="@drawable/monkey"><br>    <Button android:id="@+id/peach" android:layout_width="40dp" android:layout_height="30dp" android:layout_marginleft="180dp" android:layout_margintop="80dp" android:background="@drawable/peach"><br>    <TextView android:id="@+id/tv_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textsize="20sp" android:textcolor="#000000" android:text="摘到0个" android:layout_marginleft="250dp" android:layout_margintop="80dp"><br></TextView></Button></ImageView></Button></RelativeLayout>’<br>2、搭建桃园界面布局：<br>（1）创建桃园界面<br>（2）导入界面图片<br>（3）放置界面控件<br>代码如下：<br>‘<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content" android:layout_height="match_parent" android:background="@drawable/btn_peach" android:orientation="vertical" tools:context=".Main2Activity"><br>    <LinearLayout android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="2"><br>    </LinearLayout><br>    <LinearLayout android:layout_width="400dp" android:layout_height="0dp" android:layout_weight="3" android:background="@drawable/tree"><br>        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"><br>            <Button android:id="@+id/bt1" android:layout_width="40dp" android:layout_height="30dp" android:layout_marginleft="90dp" android:layout_margintop="60dp" android:background="@drawable/peach"><br>            <Button android:id="@+id/bt2" android:layout_width="40dp" android:layout_height="30dp" android:layout_aligntop="@id/bt1" android:layout_marginleft="140dp" android:layout_margintop="80dp" android:background="@drawable/peach"><br>            <Button android:id="@+id/bt3" android:layout_width="40dp" android:layout_height="30dp" android:layout_aligntop="@id/bt1" android:layout_marginleft="70dp" android:layout_margintop="200dp" android:background="@drawable/peach"><br>            <Button android:id="@+id/bt4" android:layout_width="40dp" android:layout_height="30dp" android:layout_alignleft="@id/bt2" android:layout_marginleft="120dp" android:layout_margintop="200dp" android:background="@drawable/peach"><br>            <Button android:id="@+id/exit" android:layout_width="90dp" android:layout_height="40dp" android:layout_alignparentright="true" android:layout_alignparentbottom="true" android:background="#8B03A9F4" android:text="退出桃园"><br>        </Button></Button></Button></Button></Button></RelativeLayout><br>    </LinearLayout><br></LinearLayout>’<br>3、实现小猴子摘桃功能：<br>（1）实现首页界面显示效果<br>（2）实现桃园界面摘桃效果<br>（3）实现页面跳转与数据回传功能<br>代码如下：<br>MainActivity.java<br>import androidx.annotation.Nullable;<br>import androidx.appcompat.app.AppCompatActivity;<br>import android.content.Intent;<br>import android.os.Bundle;<br>import android.view.View;<br>import android.widget.Button;<br>import android.widget.TextView;</p>
+                <h4 id="项目要求："><a href="#项目要求：" class="headerlink" title="项目要求："></a>项目要求：</h4><p>在第二个 Activity 进行摘桃子并记录摘取的个数，该数据保存在 Intent 的 Extras 属性中。当单击“退出桃园”的 Button 时，会在第一个 Activity 中显示摘取的桃子个数。<br>运行效果如下图所示：<br>          <img src="/.io//%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/blog/hexoblog/source/_posts/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%9B%9E%E4%BC%A0/Sample_picture.png%22" alt="avatar">                                         </p>
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>1、搭建首页界面布局：<br>（1）创建PickPeach程序<br>（2）导入界面图片<br>（3）放置界面控件<br>代码如下：<br><img src="/.io//%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/blog/hexoblog/source/_posts/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%9B%9E%E4%BC%A0/one.png%22" alt="avatar"><br>2、搭建桃园界面布局：<br>（1）创建桃园界面<br>（2）导入界面图片<br>（3）放置界面控件<br>代码如下：<br><img src="/.io//%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/blog/hexoblog/source/_posts/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%9B%9E%E4%BC%A0/two.png%22" alt="avatar"><br>3、实现小猴子摘桃功能：<br>（1）实现首页界面显示效果<br>（2）实现桃园界面摘桃效果<br>（3）实现页面跳转与数据回传功能<br>代码如下：<br>MainActivity.java<br>import androidx.annotation.Nullable;<br>import androidx.appcompat.app.AppCompatActivity;<br>import android.content.Intent;<br>import android.os.Bundle;<br>import android.view.View;<br>import android.widget.Button;<br>import android.widget.TextView;</p>
 <p>public class MainActivity extends AppCompatActivity {<br>    private Button btn_peach;<br>    private TextView tv_count;<br>    private int totalCount = 0;<br>    @Override<br>    protected void onCreate(Bundle savedInstanceState) {<br>        super.onCreate(savedInstanceState);<br>        setContentView(R.layout.activity_main);<br>        init();<br>    }<br>    private void init(){<br>        btn_peach = findViewById(R.id.btn_peach);<br>        tv_count = findViewById(R.id.tv_count);<br>        btn_peach.setOnClickListener(new View.OnClickListener() {<br>            @Override<br>            public void onClick(View view) {<br>                Intent intent = new Intent(MainActivity.this, Main2Activity.class);<br>                startActivityForResult(intent, 1);<br>            }<br>        });<br>    }<br>    protected void onActivityResult(int requestCode,int resultCode,@Nullable Intent data){<br>        super.onActivityResult(requestCode,resultCode,data);<br>        if (requestCode == 1&amp;&amp;requestCode==1){<br>            int count = data.getIntExtra(“count”,0);<br>            totalCount = totalCount + count;<br>            tv_count.setText(“摘到”+totalCount+”个”);<br>        }<br>    }<br>}<br>Main2Activity.java<br>import androidx.appcompat.app.AppCompatActivity;<br>import android.content.Intent;<br>import android.os.Bundle;<br>import android.view.View;<br>import android.widget.Button;<br>import android.widget.Toast;<br>public class Main2Activity extends AppCompatActivity implements View.OnClickListener{<br>    private int count;<br>    private Button bt1;<br>    private Button bt2;<br>    private Button bt3;<br>    private Button bt4;<br>    private Button exit;<br>    @Override<br>    protected void onCreate(Bundle savedInstanceState) {<br>        super.onCreate(savedInstanceState);<br>        setContentView(R.layout.activity_main2);<br>        init();<br>    }<br>    private void init() {<br>        bt1 = findViewById(R.id.bt1);<br>        bt2 = findViewById(R.id.bt2);<br>        bt3 = findViewById(R.id.bt3);<br>        bt4 = findViewById(R.id.bt4);<br>        exit = findViewById(R.id.exit);<br>        bt1.setOnClickListener(this);<br>        bt2.setOnClickListener(this);<br>        bt3.setOnClickListener(this);<br>        bt4.setOnClickListener(this);<br>        exit.setOnClickListener(this);<br>    }<br>    @Override<br>    public void onClick(View view) {<br>        switch (view.getId()){<br>            case R.id.bt1:<br>                info(bt1);<br>                break;<br>            case R.id.bt2:<br>                info(bt2);<br>                break;<br>            case R.id.bt3:<br>                info(bt3);<br>                break;<br>            case R.id.bt4:<br>                info(bt4);<br>                break;<br>            case R.id.exit:<br>                returnData();<br>                break;<br>        }<br>    }<br>    private void info(Button btn) {<br>        count++;<br>        btn.setVisibility(View.INVISIBLE);<br>        Toast.makeText(Main2Activity.this,”摘到”+count+”个桃子”,Toast.LENGTH_LONG).show();<br>    }<br>    private void returnData(){<br>        Intent intent = new Intent();<br>        intent.putExtra(“count”,count);<br>        setResult(1,intent);<br>        Main2Activity.this.finish();<br>    }<br>}</p>
-<h4 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h4><p><img src="/.io//应用程序/blog/hexoblog/themes/hexo-theme-matery/source/1.png" alt="avatar"><br><img src="/.io//应用程序/blog/hexoblog/themes/hexo-theme-matery/source/2.png" alt="avatar"><br><img src="/.io//应用程序/blog/hexoblog/themes/hexo-theme-matery/source/3.png" alt="avatar"></p>
+<h4 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h4><p><img src="/.io//应用程序/blog/hexoblog/source/_posts/安卓开发页面跳转与数据回传1.png" alt="avatar"><br><img src="/.io//应用程序/blog/hexoblog/source/_posts/安卓开发页面跳转与数据回传2.png" alt="avatar"><br><img src="/.io//应用程序/blog/hexoblog/source/_posts/安卓开发页面跳转与数据回传3.png" alt="avatar"></p>
 <h4 id="收获与总结"><a href="#收获与总结" class="headerlink" title="收获与总结"></a>收获与总结</h4><p>1、界面跳转通过Intent进行跳转：分为隐式Intent 显示Intent。<br>2、Intent设定规则： 定义　绑定另一个页面　启动另一个页面；<br>关闭页面： finish()。<br>3、通过intent传递数据<br>（1）直接传递， intent . putExtra(key, value)<br>（2）通过bundle， intent . putExtras ( bundle );<br>注意：<br>（1）这两种都要求传递的对象必须可序列化（Parcelable、Serializable）<br>（2）Parcelable实现相对复杂<br>（3）关于Parcelable和Serializable，和Parcelable相比，Seriaizable容易出错并且速度相当慢。（4）通过intent传递数据是有大小限制滴，超过限制，要么抛异常，要么新的Activity启动失败。</p>
 
                 
@@ -495,7 +495,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://w-xi-xi.github.io/2022/03/23/Android%20Studio%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%9B%9E%E4%BC%A0/">https://w-xi-xi.github.io/2022/03/23/Android%20Studio%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%9B%9E%E4%BC%A0/</a>
+                    <a href="https://w-xi-xi.github.io/2022/03/23/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%9B%9E%E4%BC%A0/">https://w-xi-xi.github.io/2022/03/23/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%9B%9E%E4%BC%A0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -702,9 +702,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/03/23/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%9B%9E%E4%BC%A0/">
                     <div class="card-image">
@@ -722,9 +723,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -733,6 +734,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -743,13 +745,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/29/postgresql%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99/">
+                <a href="/2022/03/23/Android%20Studio%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%9B%9E%E4%BC%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="postgresql安装问题及解决">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="页面跳转与数据回传">
                         
-                        <span class="card-title">postgresql安装问题及解决</span>
+                        <span class="card-title">页面跳转与数据回传</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -760,7 +762,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-23
                             </span>
                         <span class="publish-author">
                             
